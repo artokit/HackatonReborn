@@ -12,6 +12,9 @@ import photo7 from './photo7.svg';
 import photo8 from './photo8.svg';
 import photo9 from './photo9.svg';
 import photo10 from './photo10.svg';
+import index1 from "../../../assets/img/index1.png";
+import index2 from "../../../assets/img/index2.png";
+
 import {UserService} from "../../../API/UserService";
 
 const Main = () => {
@@ -78,7 +81,7 @@ const Main = () => {
                     </div>
                     <div className={classes.modes}>
                         <div className={classes.mode}>
-                            <div>КООП</div>
+                            <div><img style={{width: "714px", height: "612px"}} src={index2} alt=""/></div>
                         </div>
                         <div className={classes.description} style={{backgroundColor: "transparent", color: "white", fontSize: "32px", border: "none", lineHeight: "50px"}}>
                             <div>
@@ -88,12 +91,12 @@ const Main = () => {
                     </div>
                     <div className={classes.modes} style={{flexDirection: 'row-reverse'}}>
                         <div className={classes.mode}>
-                            <div>КООП</div>
+                            <div><img style={{width: "714px", height: "612px"}} src={index1} alt=""/></div>
                         </div>
                         <div style={{backgroundColor: "transparent", color: "white", fontSize: "32px", border: "none", lineHeight: "50px"}} className={classes.description}>
                             <div>
                                 <span style={{color: "#8D9CA6"}}>Здесь вы можете </span>
-                                <span style={{color: "white"}}>соревноваться с другими пользователями</span> в решении выбранных вами заданий. <span style={{color: "#5FB357"}}>Кто быстрее даст правильный ответ, от и победил!</span>
+                                <span style={{color: "white"}}>соревноваться с другими пользователями</span> в решении выбранных вами заданий. <span style={{color: "#5FB357"}}>Кто быстрее даст правильный ответ, тот и победил!</span>
                             </div>
                         </div>
                     </div>
