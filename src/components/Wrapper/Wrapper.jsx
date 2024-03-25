@@ -7,7 +7,6 @@ import {useNavigate} from "react-router-dom";
 
 const Wrapper = ({children, ...props}) => {
     const navigate = useNavigate();
-    console.log(localStorage.getItem("accessToken"));
     if (localStorage.getItem("accessToken") === null) {
         navigate("/login");
     }

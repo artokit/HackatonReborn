@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import FileIcon from "../../../assets/icons/file.svg";
-
-const UploaderFile = () => {
-    const [file, setFile] = useState(null);
-
+import zipLogo from "../../../assets/img/zip.svg"
+const UploaderFile = ({file, setFile}) => {
     const handleFileChange = (e) => {
         if (e.target.files) {
             setFile(e.target.files[0]);
@@ -23,7 +21,6 @@ const UploaderFile = () => {
 
                 const data = await result.json();
 
-                console.log(data);
             } catch (error) {
                 console.error(error);
             }
@@ -41,10 +38,13 @@ const UploaderFile = () => {
             alignItems: 'center',
             justifyContent: 'center'
         }}>
-            {(file)?<div></div>:<div>
+            {(file)?<div style={{display: "flex", gap: "10px", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+                <img src={zipLogo} alt=""/>
+                <span style={{color: "black", fontSize: "16px"}}>{file.name}</span>
+            </div>:<div>
                 <input
                     onChange={(e) => {
-                        setFile();
+                        setFile(e.target.files[0]);
                     }} id="uploadFile" style={{display: "none"}} type="file"/>
                 <img src={FileIcon} style={{display: 'block', margin: '0 auto'}}/>
                 <div style={{marginTop: '12px', fontSize: '20px'}}>

@@ -3,7 +3,7 @@ import {CategoriesService} from "../../../API/CategoriesService";
 import classes from "./CategoriesList.module.css";
 import CategoriesItem from "./CategoriesItem";
 
-const CategoriesList = () => {
+const CategoriesList = ({setCategory}) => {
     const [categories, setCategories] = useState([{}]);
     const categories_active = React.useRef(null);
     const success = (res) => {
@@ -18,6 +18,7 @@ const CategoriesList = () => {
     }, []);
 
     const f = (position) => {
+        setCategory(position);
         setTimeout(() => {
             categories_active.current.style.transform = `translate(${(position-1)*100}%)`;
         }, 100)

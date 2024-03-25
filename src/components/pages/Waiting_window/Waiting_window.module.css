@@ -1,0 +1,82 @@
+.page{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 204px ;
+    display:flex ;
+    flex-direction: column;
+}
+.navigation{
+    display: flex;
+    gap: 24px;
+    margin: 120.15px 0px 48px;
+}
+
+.typetask{
+    width: 180px;
+    height: 53px;
+    padding: 15px 0px 0px 0px;
+    border-radius: 12px;
+    border: 1px ;
+    opacity: 0px;
+    background: rgba(255, 255, 255, 0.25);
+    color:rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.leveltask{
+    width: 158px;
+    height: 53px;
+    padding: 15px 0px 0px 0px;
+    border-radius: 12px;
+    border: 1px ;
+    opacity: 0px;
+    background: rgba(255, 255, 255, 0.25);
+    color:rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.numbertask{
+    width: 42px;
+    height: 53px;
+    padding: 15px 0px 0px 0px;
+    border-radius: 12px;
+    border: 1px ;
+    opacity: 0px;
+    background: rgba(255, 255, 255, 0.25);
+    color:rgba(255, 255, 255, 1);
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align: center;  
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.vector{
+    margin:18px 0px  0px ;
+}
+.expect{
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 32px;
+    padding: 222px 220.5px;
+}
+.expecttext{
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56.25px;
+}
+

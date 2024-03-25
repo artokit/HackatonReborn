@@ -18,7 +18,21 @@
     border-radius: 100px;
     background: #8D9CA64D;
     border: 3px solid #8D9CA6;
-    
+    transition: .5s;
+}
+
+.vertical, .horizontal {
+    transform: rotateZ(0);
+    transition: .5s;
+}
+.creator:hover .vertical {
+    transition: .5s;
+    transform: rotateZ(360deg);
+}
+
+.creator:hover .horizontal {
+    transition: .5s;
+    transform: rotateZ(360deg);
 }
 .horizontal{
     width: 84px;

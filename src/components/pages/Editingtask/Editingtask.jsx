@@ -1,15 +1,17 @@
 import React from 'react';
 import Wrapper from "../../Wrapper/Wrapper";
 import classes from "./Editingtask.module.css";
+import {useNavigate} from "react-router-dom";
 
         
 const Editingtask = () => {
+    const navigate = useNavigate();
     return (
         <Wrapper>
             <div  className={classes.page}>
                 <div className={classes.block1}>
                     <div>
-                        <div className={classes.creator}><a href='/'><div className={classes.horizontal}><div className={classes.vertical}></div></div>
+                        <div className={classes.creator} style={{cursor: "pointer"}} onClick={() => {navigate("/add_task")}}><a><div className={classes.horizontal}><div className={classes.vertical}></div></div>
                         </a></div>
                         <div className={classes.creatsignature}>Добавить</div>
                     </div>

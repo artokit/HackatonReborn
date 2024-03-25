@@ -1,4 +1,5 @@
-import {$api} from "./index"
+import {$api} from "./index";
+
 
 export async function RegisterRequest(username, email, password, successCallback, errorCallback) {
     let request_data = {
@@ -10,10 +11,6 @@ export async function RegisterRequest(username, email, password, successCallback
         (res) => {
             saveAccessToken(res.data["accessToken"]);
             successCallback();
-        }
-    ).catch(
-        () => {
-            errorCallback();
         }
     )
 }
@@ -29,17 +26,14 @@ export async function LoginRequest(username, password, SuccessCallback, ErrorCal
             saveAccessToken(res.data["accessToken"]);
             SuccessCallback();
         }
-    ).catch(
-        () => {
-            ErrorCallback()
+    ).catch((error) => {
+        if (error.response.status === 400) {
+            ErrorCallback(error);
         }
-    )
+    })
+
 }
 
 function saveAccessToken(accessToken) {
     localStorage.setItem("accessToken", accessToken);
-    $api.interceptors.request.use(config => {
-        config.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('accessToken'))}`;
-        return config;
-    });
 }

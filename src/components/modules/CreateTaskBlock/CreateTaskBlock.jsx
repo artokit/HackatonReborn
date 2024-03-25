@@ -4,11 +4,18 @@ import CategoriesList from "../../shared/CategoriesList/CategoriesList";
 import LevelsList from "../../shared/LevelsList/LevelsList";
 import UploaderFile from "../UploaderFile/UploaderFile";
 import {TaskService} from "../../../API/TaskService";
+import {UserService} from "../../../API/UserService";
 
 const CreateTaskBlock = () => {
     const [rightAnswer, setRightAnswer] = useState("");
     const [levelId, setLevelId] = useState(1);
     const [categoryId, setCategoryId] = useState(1);
+    const [content, setContent] = useState("");
+    const [file, setFile] = useState();
+
+    const success = (res) => {
+        console.log(res);
+    };
 
     return (
         <div style={{
@@ -50,13 +57,13 @@ const CreateTaskBlock = () => {
                     </div>
                     <div style={{width: '73%', display: 'flex', flexDirection: 'column', gap: '36px'}}>
                         <LevelsList setLevel={setLevelId}/>
-                        <CategoriesList/>
+                        <CategoriesList setCategory={setCategoryId}/>
                     </div>
                 </div>
-                <UploaderFile/>
+                <UploaderFile file={file} setFile={setFile}/>
             </div>
             <div style={{height: '50%', display: 'flex', gap: '36px'}}>
-                <textarea  placeholder="Введите текст задания" className={classes.enterTextTask} style={{
+                <textarea onChange={(e) => {setContent(e.target.value)}}  placeholder="Введите текст задания" className={classes.enterTextTask} style={{
                     width: '66.6%',
                     resize: "none",
                     overflow: "hidden",
@@ -86,7 +93,12 @@ const CreateTaskBlock = () => {
                         justifyContent: 'center',
                         borderRadius: '6px'
                     }} className={classes.LoadButton}>
-                        <div onClick={async () => {await TaskService.UploadTask(levelId, rightAnswer)}}>Загрузить</div>
+                        <div onClick={async () => {
+                            await TaskService.UploadTask(levelId, categoryId, rightAnswer, content, async (res) => {
+                                let id = res['data'].id;
+                                await TaskService.UploadPhoto(id, file, success);
+                            })
+                        }}>Загрузить</div>
                     </div>
                 </div>
             </div>
