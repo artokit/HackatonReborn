@@ -8,4 +8,12 @@ export class UserService {
             }
         )
     }
+
+    static async GetTop10(success) {
+        $api.get("/api/Rating/top10").then(
+            (res) => {
+                success(res);
+            }
+        );
+    }
 }

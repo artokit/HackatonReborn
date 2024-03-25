@@ -23,4 +23,18 @@ export class TaskService {
             success(res);
         });
     }
+
+    static async GetAllTasks(levelId, categoryId, success) {
+        $api.get(`/api/Task/sortTask?levelId=${levelId}&categoryId=${categoryId}`).then((res) => {success(res)});
+    }
+
+    static async getTask(id, success) {
+        $api.get("/api/Task/" + id).then((res) => {success(res)});
+    }
+
+    static async UploadAnswer(id, answer, success, error) {
+        $api.put("/api/Task/solve/" + id + "?answer=" + answer).then((res) => {
+            success(res);
+        }).catch(() => {error()});
+    }
 }

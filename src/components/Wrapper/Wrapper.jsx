@@ -1,9 +1,9 @@
 import React from 'react';
 import Nav from "../shared/Nav/Nav";
 import Header from "../shared/Header/Header";
-import Footer from "../shared/Footer/Footer";
 import cls from "./wrapper.module.css";
 import {useNavigate} from "react-router-dom";
+import Footer from "../shared/Footer/Footer";
 
 const Wrapper = ({children, ...props}) => {
     const navigate = useNavigate();

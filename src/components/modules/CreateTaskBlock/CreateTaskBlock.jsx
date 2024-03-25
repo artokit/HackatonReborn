@@ -5,6 +5,7 @@ import LevelsList from "../../shared/LevelsList/LevelsList";
 import UploaderFile from "../UploaderFile/UploaderFile";
 import {TaskService} from "../../../API/TaskService";
 import {UserService} from "../../../API/UserService";
+import {useNavigate} from "react-router-dom";
 
 const CreateTaskBlock = () => {
     const [rightAnswer, setRightAnswer] = useState("");
@@ -12,6 +13,7 @@ const CreateTaskBlock = () => {
     const [categoryId, setCategoryId] = useState(1);
     const [content, setContent] = useState("");
     const [file, setFile] = useState();
+    const navigate = useNavigate();
 
     const success = (res) => {
         console.log(res);
@@ -69,7 +71,7 @@ const CreateTaskBlock = () => {
                     overflow: "hidden",
                     height: '100%',
                     backgroundColor: 'rgba(141, 156, 166, 1)',
-                    border: '2px dashed rgba(21, 35, 42, 1)',
+                    border: '5px dashed rgba(21, 35, 42, 1)',
                 }}>
                 </textarea>
                 <div style={{width: '33.3%', height: '100%', display: 'flex', flexDirection: 'column', gap: '36px'}}>
@@ -92,13 +94,17 @@ const CreateTaskBlock = () => {
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: '6px'
-                    }} className={classes.LoadButton}>
-                        <div onClick={async () => {
-                            await TaskService.UploadTask(levelId, categoryId, rightAnswer, content, async (res) => {
-                                let id = res['data'].id;
-                                await TaskService.UploadPhoto(id, file, success);
-                            })
-                        }}>Загрузить</div>
+                    }} className={classes.LoadButton} onClick={async () => {
+                        if(!file) {
+
+                        }
+                        await TaskService.UploadTask(levelId, categoryId, rightAnswer, content, async (res) => {
+                            let id = res['data'].id;
+                            await TaskService.UploadPhoto(id, file, success);
+                            navigate("/tasks");
+                        })
+                    }}>
+                        <div>Загрузить</div>
                     </div>
                 </div>
             </div>

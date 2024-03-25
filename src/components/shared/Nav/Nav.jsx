@@ -53,12 +53,6 @@ const routerAdmin = [
         icon: TasksIcon
     },
     {
-        title: 'Ред. достиж.',
-        path: '/multiplayer',
-        component: <Register/>,
-        icon: CoopIcon
-    },
-    {
         title: 'Ред. мультипл.',
         path: '/multiplayer',
         component: <Register/>,

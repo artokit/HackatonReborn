@@ -76,6 +76,9 @@
     background: #B35757;
     padding: 23.95px 86px;
 }
+.vebadge,.ebadge,.abadge,.dbadge {
+    cursor: pointer;
+}
 .badge{
     display: flex;
     width: 100%;
@@ -89,11 +92,35 @@
     height: 180px;
     border-radius: 12px;
     background-color:#D7D9D8;
+    transition: .2s;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
+
+.task__inner {
+    opacity: 0;
+    color: white;
+    text-shadow: black 0 0 3px
+}
+
+.task:hover {
+    background: #b4b3b3;
+    transition: .2s;
+}
+
+.task:hover .task__inner {
+    transition: .2s;
+    opacity: 1;
+}
+
 .tasks{
     display: flex;
     width: 100%;
     gap: 34px;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
+

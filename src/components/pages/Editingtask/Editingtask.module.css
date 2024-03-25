@@ -21,6 +21,10 @@
     transition: .5s;
 }
 
+.block3 > div {
+    cursor: pointer;
+}
+
 .vertical, .horizontal {
     transform: rotateZ(0);
     transition: .5s;
@@ -95,16 +99,12 @@
     color: #FFFFFF;
 }
 
-.block2{
-    display: flex;
-
-}
-
 .vebadge,.ebadge,.abadge,.dbadge{
     border-radius:12px;
     font-family: Roboto;
     font-size: 24px;
     font-weight: 400;
+    /*cursor: pointer;*/
     line-height: 28.13px;
 }
 .vebadge{

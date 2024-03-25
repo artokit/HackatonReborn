@@ -8,6 +8,7 @@ import AddTask from "./components/pages/addTask/addTask";
 import Main from "./components/pages/Main/Main";
 import Alltask from "./components/pages/Alltask/Alltask";
 import Waitingwindow from "./components/pages/Waiting_window/Waiting_window";
+import TaskLoad from "./components/pages/TaskLoad/TaskLoad";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                 <Route exact path='/add_task' element={<AddTask/>}/>
                 <Route exact path='/main' element={<Main/>}/>
                 <Route exact path='/tasks' element={<Alltask/>}/>
+                <Route exact path='/task/:id' element={<TaskLoad/>}/>
                 <Route exact path='/wait' element={<Waitingwindow/>}/>
             </Routes>
         </div>

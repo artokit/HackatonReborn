@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Wrapper from "../../Wrapper/Wrapper";
-import Footer from '../../shared/Footer/Footer';
 import classes from "./Main.module.css";
 import award_image from '../../../assets/img/award.png';
 import photo1 from './photo1.svg';
@@ -13,8 +12,19 @@ import photo7 from './photo7.svg';
 import photo8 from './photo8.svg';
 import photo9 from './photo9.svg';
 import photo10 from './photo10.svg';
+import {UserService} from "../../../API/UserService";
 
 const Main = () => {
+    const [top, setTop] = useState([{}]);
+    const success = (res) => {
+        setTop(res.data);
+    }
+    // useEffect(() => {
+    //     async function f() {
+    //         await UserService.GetTop10(success);
+    //     }
+    //     f();
+    // }, []);
     return (
         <Wrapper>
             <div className={classes.content_container}>
@@ -70,16 +80,21 @@ const Main = () => {
                         <div className={classes.mode}>
                             <div>КООП</div>
                         </div>
-                        <div className={classes.description}>
-                            <div>описание</div>
+                        <div className={classes.description} style={{backgroundColor: "transparent", color: "white", fontSize: "32px", border: "none", lineHeight: "50px"}}>
+                            <div>
+                                <span style={{color: "#5FB357"}}>Реверс-инжиниринг, криптография 4-х уровней сложности -</span> <span style={{color: "#8D9CA6"}}>всё это находится в собранной нами коллекции</span> индивидуальных заданий <span style={{color: "#8D9CA6FF"}}>к решению которых вы можете приступить уже сейчас!</span>
+                            </div>
                         </div>
                     </div>
                     <div className={classes.modes} style={{flexDirection: 'row-reverse'}}>
                         <div className={classes.mode}>
                             <div>КООП</div>
                         </div>
-                        <div className={classes.description}>
-                            <div>описание</div>
+                        <div style={{backgroundColor: "transparent", color: "white", fontSize: "32px", border: "none", lineHeight: "50px"}} className={classes.description}>
+                            <div>
+                                <span style={{color: "#8D9CA6"}}>Здесь вы можете </span>
+                                <span style={{color: "white"}}>соревноваться с другими пользователями</span> в решении выбранных вами заданий. <span style={{color: "#5FB357"}}>Кто быстрее даст правильный ответ, от и победил!</span>
+                            </div>
                         </div>
                     </div>
                 </div>

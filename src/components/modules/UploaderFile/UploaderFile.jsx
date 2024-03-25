@@ -32,7 +32,7 @@ const UploaderFile = ({file, setFile}) => {
             width: '33.3%',
             backgroundColor: 'rgb(141 156 166 / 50%)',
             borderRadius: '6px',
-            border: '20px dashed rgba(21, 35, 42, 1)',
+            border: '5px dashed rgba(21, 35, 42, 1)',
             display: 'flex',
             flexDirection: "column",
             alignItems: 'center',
