@@ -1,0 +1,38 @@
+.progress__list {
+    overflow-y: scroll;
+    height: 267px;
+}
+
+.progress__item {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 16px;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    gap: 15px
+}
+
+.item__text {
+
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 4px;
+}
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.item__dot {
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 4px;
+}

@@ -1,0 +1,40 @@
+.opacityBlock {
+    background: rgba(141, 156, 166, 0.3);
+    border-radius: 32px;
+    padding: 25px;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+.my {
+    width: 75.5%;
+    margin: 264px auto 0 auto;
+}
+
+.my__info {
+    gap: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.user__avatar {
+
+}
+
+.info__user, .info__progress {
+    height: 410px;
+    width: 49%;
+}
+
+.progress__header {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}

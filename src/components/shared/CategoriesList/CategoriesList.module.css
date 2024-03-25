@@ -1,0 +1,36 @@
+.categoriesItem {
+
+}
+
+.categories_active {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    width: 243px;
+    border-radius: 6px;
+    height: 81.17px;
+    display: flex;
+    transition: .5s;
+}
+
+@keyframes categoriesActiveMove {
+    0%{
+        width: 50%;
+    }
+    60%{
+        width: 60%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.categories {
+    padding: 10px;
+    background: rgb(141, 156, 166);
+    position: relative;
+    height: 50%;
+    /*background: lightgray;*/
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden
+}

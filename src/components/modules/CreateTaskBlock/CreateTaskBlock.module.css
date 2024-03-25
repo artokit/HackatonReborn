@@ -1,0 +1,53 @@
+.enterTextTask {
+    transition: .2s;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.enterTextTask:focus {
+    transition: .2s;
+    border-radius: 20px;
+}
+
+.enterRightAnswer {
+    color: white;
+    transition: .2s;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.enterRightAnswer:focus {
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.enterRightAnswer::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.enterTextTask::placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(85px) translateX(245px);
+    color: black;
+    font-size: 20px
+}
+
+.LoadButton {
+    transition: .3s;
+    background: rgb(95, 179, 87)
+}
+
+.LoadButton:hover {
+    transition: .3s;
+    background: rgb(114, 192, 105);
+    cursor: pointer;
+}

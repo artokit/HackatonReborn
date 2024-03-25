@@ -1,0 +1,31 @@
+import React from 'react';
+import Nav from "../shared/Nav/Nav";
+import Header from "../shared/Header/Header";
+import Footer from "../shared/Footer/Footer";
+import cls from "./wrapper.module.css";
+import {useNavigate} from "react-router-dom";
+
+const Wrapper = ({children, ...props}) => {
+    const navigate = useNavigate();
+    console.log(localStorage.getItem("accessToken"));
+    if (localStorage.getItem("accessToken") === null) {
+        navigate("/login");
+    }
+    return (
+        <div {...props}>
+            <Header/>
+            <div>
+                <div style={{display: 'flex'}}>
+                    <Nav/>
+                    <div style={{width: '100%', height: 'calc(100vh - 120px)', overflow: 'auto'}} className={cls.bg}>
+                        <div>{children}</div>
+                        <Footer/>
+                    </div>
+                </div>
+                <Footer/>
+            </div>
+        </div>
+    );
+};
+
+export default Wrapper;

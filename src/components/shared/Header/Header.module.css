@@ -1,0 +1,22 @@
+.header {
+    width: 100%;
+    display: flex;
+    height: 120px;
+    border-bottom: #8D9CA6 solid 1px;
+    gap: 24px;
+    justify-content: flex-end;
+}
+
+.header__rating {
+    color: black;
+    padding: 15px 68px;
+    background: #8D9CA6;
+    border-radius: 12px;
+}
+
+.header__avatar {
+    background: gray;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}

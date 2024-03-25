@@ -1,0 +1,143 @@
+.page{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 204px ;
+    display:flex ;
+    flex-direction: column;
+}
+
+.block1{
+    width: 100%;
+    height: 204px;
+}
+
+.creator{
+    width: 180px;
+    height: 180px;
+    margin: 48px auto 10px;
+    border-radius: 100px;
+    background: #8D9CA64D;
+    border: 3px solid #8D9CA6;
+    
+}
+.horizontal{
+    width: 84px;
+    height: 14px;
+    background: #D7D9D8;
+    margin: 83px 48px;
+}
+
+.vertical{
+    width: 14px;
+    height: 84px;
+    background: #D7D9D8;
+    position: relative;
+    bottom:35px;
+    left: 35px; ;
+}
+.creatsignature{
+   font-family: Roboto;
+   font-size: 24px;
+   font-weight: 400;
+   line-height: 28.13px;
+   color: #FFFFFF;
+   text-align: center;
+}
+.block2{
+    position: relative;
+    margin: 144px 0px 96px;
+}
+.filter{
+    width: 100%;
+    height: 206px;
+    background: #4E5C65;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.fbot1,.fbot2{
+    width: 50%;
+    height: 100%;
+    border-radius: 24px;
+}
+
+.bot {
+    position: relative;
+    display: block;
+    margin: 58px auto;
+    width: 408px;
+    height: 90px;
+    background: #15232A99;
+    border: 3px solid #15232A;
+    border-radius:32px;
+
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 37.5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.block2{
+    display: flex;
+
+}
+
+.vebadge,.ebadge,.abadge,.dbadge{
+    border-radius:12px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.13px;
+}
+.vebadge{
+    background: #ACDE94;
+    width: 249px;
+    height:76px;
+    padding: 24px 48px;
+    margin: 0px 0px 36px;
+}
+.ebadge{
+    background: #5FB357;
+    width: 180px;
+    height:76px;
+    padding: 24px 48px;
+    margin: 84px 0px 36px;
+}
+
+.abadge{
+    background: #B38957;
+    width: 180px;
+    height:76px;
+    padding: 24px 41px;
+    margin: 84px 0px 36px;
+}
+.dbadge{
+    background: #B35757;
+    width: 180px;
+    height:76px;
+    padding: 24px 36px;
+    margin: 84px 0px 36px;
+}
+
+.task{
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    background-color:#D7D9D8;
+}
+.tasks{
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+   
+
+
+

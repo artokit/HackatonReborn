@@ -1,0 +1,12 @@
+.levels {
+    height: 50%;
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden
+}
+
+.levelItem {
+    width: 25%;
+    cursor: pointer;
+    transition: .3s;
+}
